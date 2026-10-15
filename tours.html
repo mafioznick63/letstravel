@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <!-- Без цього рядка телефон показує сторінку як зменшену десктопну -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Гарячі тури від Let's Travel: 30 країн, вибір виду туру, кількості людей і ночей.">
+  <title>Гарячі тури — Let's Travel</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+    // Ставимо збережену тему ще до показу сторінки (без миготіння)
+    (function () {
+      var t = localStorage.getItem("theme") || "auto";
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти до змісту</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><span aria-hidden="true">✈️</span> Let's Travel</a>
+      <nav aria-label="Головне меню">
+
+        <ul class="nav-list">
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="tours.html" aria-current="page">Гарячі тури</a></li>
+          <li><a href="custom.html">Підбір туру</a></li>
+          <li><a href="index.html#contacts">Контакти</a></li>
+        </ul>
+      </nav>
+        <div class="theme-switch" role="radiogroup" aria-label="Тема оформлення">
+        <label><input type="radio" name="theme" id="t-auto" value="auto" checked><span>🖥️ Авто</span></label>
+        <label><input type="radio" name="theme" id="t-light" value="light"><span>☀️ Світла</span></label>
+        <label><input type="radio" name="theme" id="t-dark" value="dark"><span>🌙 Темна</span></label>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <img src="img/tours-banner.jpg" alt="" width="1600" height="600" fetchpriority="high">
+      <div class="container">
+        <h1>Гарячі тури</h1>
+        <p>30 країн на вибір. Натисніть на картку, оберіть вид туру, дату, кількість людей і ночей — і залиште заявку. Ціни орієнтовні, за 1 особу.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <nav class="region-nav" aria-label="Регіони"><a class="pill" href="#europe"><span aria-hidden="true">🏰</span> Європа та Кавказ</a><a class="pill" href="#asia"><span aria-hidden="true">🏯</span> Азія та Близький Схід</a><a class="pill" href="#africa"><span aria-hidden="true">🐪</span> Африка</a><a class="pill" href="#america"><span aria-hidden="true">🗽</span> Америка</a></nav>
+
+        <h2 class="region-title" id="europe"><span aria-hidden="true">🏰</span> Європа та Кавказ <small>16</small></h2>
+        <div class="countries">
+          <details class="country" id="greece">
+            <summary>
+              <span class="country-photo"><img src="img/countries/greece.jpg" alt="Греція: Крит" width="800" height="500" loading="lazy"><span class="price-tag">від $620</span></span>
+              <span class="country-title"><span><span class="name">Греція</span><span class="from">Крит та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Білі містечка, оливкові гаї та місця, де народилась західна цивілізація.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Крит, Родос, Афіни</dd></div>
+                    <div><dt>Сезон:</dt><dd>травень – жовтень</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 2,5 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="Греція">
+                  <div class="fields">
+                    <div class="field"><label for="greece-type">Вид туру</label><select id="greece-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="greece-date">Дата вильоту</label><input id="greece-date" name="date" type="date" required></div>
+                    <div class="field"><label for="greece-nights">Ночей</label><select id="greece-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="greece-hotel">Готель</label><select id="greece-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="greece-adults">Дорослі</label><input id="greece-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="greece-kids">Діти</label><input id="greece-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="greece-meal">Харчування</label><select id="greece-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="greece-extra">Додатково</label><select id="greece-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+          <details class="country" id="spain">
+            <summary>
+              <span class="country-photo"><img src="img/countries/spain.jpg" alt="Іспанія: Барселона" width="800" height="500" loading="lazy"><span class="price-tag">від $750</span></span>
+              <span class="country-title"><span><span class="name">Іспанія</span><span class="from">Барселона та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Архітектура Гауді, піщані пляжі та тапас до пізньої ночі.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Барселона, Коста-Брава, Мадрид</dd></div>
+                    <div><dt>Сезон:</dt><dd>травень – жовтень</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 3,5 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="Іспанія">
+                  <div class="fields">
+                    <div class="field"><label for="spain-type">Вид туру</label><select id="spain-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="spain-date">Дата вильоту</label><input id="spain-date" name="date" type="date" required></div>
+                    <div class="field"><label for="spain-nights">Ночей</label><select id="spain-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="spain-hotel">Готель</label><select id="spain-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="spain-adults">Дорослі</label><input id="spain-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="spain-kids">Діти</label><input id="spain-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="spain-meal">Харчування</label><select id="spain-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="spain-extra">Додатково</label><select id="spain-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+          <details class="country" id="italy">
+            <summary>
+              <span class="country-photo"><img src="img/countries/italy.jpg" alt="Італія: Рим" width="800" height="500" loading="lazy"><span class="price-tag">від $800</span></span>
+              <span class="country-title"><span><span class="name">Італія</span><span class="from">Рим та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Музеї, фонтани, піца та романтика венеційських каналів.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Рим, Венеція, Флоренція</dd></div>
+                    <div><dt>Сезон:</dt><dd>квітень – жовтень</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 3 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="Італія">
+                  <div class="fields">
+                    <div class="field"><label for="italy-type">Вид туру</label><select id="italy-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="italy-date">Дата вильоту</label><input id="italy-date" name="date" type="date" required></div>
+                    <div class="field"><label for="italy-nights">Ночей</label><select id="italy-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="italy-hotel">Готель</label><select id="italy-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="italy-adults">Дорослі</label><input id="italy-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="italy-kids">Діти</label><input id="italy-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="italy-meal">Харчування</label><select id="italy-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="italy-extra">Додатково</label><select id="italy-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+          <details class="country" id="france">
+            <summary>
+              <span class="country-photo"><img src="img/countries/france.jpg" alt="Франція: Париж" width="800" height="500" loading="lazy"><span class="price-tag">від $850</span></span>
+              <span class="country-title"><span><span class="name">Франція</span><span class="from">Париж та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Ейфелева вежа, Лувр, лавандові поля та сирні дегустації.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Париж, Лазурний берег, Прованс</dd></div>
+                    <div><dt>Сезон:</dt><dd>квітень – жовтень</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 3 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="Франція">
+                  <div class="fields">
+                    <div class="field"><label for="france-type">Вид туру</label><select id="france-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="france-date">Дата вильоту</label><input id="france-date" name="date" type="date" required></div>
+                    <div class="field"><label for="france-nights">Ночей</label><select id="france-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="france-hotel">Готель</label><select id="france-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="france-adults">Дорослі</label><input id="france-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="france-kids">Діти</label><input id="france-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="france-meal">Харчування</label><select id="france-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="france-extra">Додатково</label><select id="france-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+          <details class="country" id="czechia">
+            <summary>
+              <span class="country-photo"><img src="img/countries/czechia.jpg" alt="Чехія: Прага" width="800" height="500" loading="lazy"><span class="price-tag">від $420</span></span>
+              <span class="country-title"><span><span class="name">Чехія</span><span class="from">Прага та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Казкові замки, пиво та затишні різдвяні ярмарки.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Прага, Карлові Вари, Чеський Крумлов</dd></div>
+                    <div><dt>Сезон:</dt><dd>цілий рік</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 2 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="Чехія">
+                  <div class="fields">
+                    <div class="field"><label for="czechia-type">Вид туру</label><select id="czechia-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="czechia-date">Дата вильоту</label><input id="czechia-date" name="date" type="date" required></div>
+                    <div class="field"><label for="czechia-nights">Ночей</label><select id="czechia-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="czechia-hotel">Готель</label><select id="czechia-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="czechia-adults">Дорослі</label><input id="czechia-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="czechia-kids">Діти</label><input id="czechia-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="czechia-meal">Харчування</label><select id="czechia-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="czechia-extra">Додатково</label><select id="czechia-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+          <details class="country" id="croatia">
+            <summary>
+              <span class="country-photo"><img src="img/countries/croatia.jpg" alt="Хорватія: Дубровник" width="800" height="500" loading="lazy"><span class="price-tag">від $680</span></span>
+              <span class="country-title"><span><span class="name">Хорватія</span><span class="from">Дубровник та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Адріатичне узбережжя, мури Дубровника й бірюзові озера.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Дубровник, Спліт, Плітвіцькі озера</dd></div>
+                    <div><dt>Сезон:</dt><dd>травень – жовтень</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 2,5 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="Хорватія">
+                  <div class="fields">
+                    <div class="field"><label for="croatia-type">Вид туру</label><select id="croatia-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="croatia-date">Дата вильоту</label><input id="croatia-date" name="date" type="date" required></div>
+                    <div class="field"><label for="croatia-nights">Ночей</label><select id="croatia-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="croatia-hotel">Готель</label><select id="croatia-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="croatia-adults">Дорослі</label><input id="croatia-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="croatia-kids">Діти</label><input id="croatia-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="croatia-meal">Харчування</label><select id="croatia-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="croatia-extra">Додатково</label><select id="croatia-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+          <details class="country" id="portugal">
+            <summary>
+              <span class="country-photo"><img src="img/countries/portugal.jpg" alt="Португалія: Лісабон" width="800" height="500" loading="lazy"><span class="price-tag">від $780</span></span>
+              <span class="country-title"><span><span class="name">Португалія</span><span class="from">Лісабон та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Трамваї Лісабона, портвейн і океанські скелі Алгарве.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Лісабон, Порту, Алгарве</dd></div>
+                    <div><dt>Сезон:</dt><dd>квітень – жовтень</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 4 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="Португалія">
+                  <div class="fields">
+                    <div class="field"><label for="portugal-type">Вид туру</label><select id="portugal-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="portugal-date">Дата вильоту</label><input id="portugal-date" name="date" type="date" required></div>
+                    <div class="field"><label for="portugal-nights">Ночей</label><select id="portugal-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="portugal-hotel">Готель</label><select id="portugal-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="portugal-adults">Дорослі</label><input id="portugal-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="portugal-kids">Діти</label><input id="portugal-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="portugal-meal">Харчування</label><select id="portugal-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="portugal-extra">Додатково</label><select id="portugal-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+          <details class="country" id="montenegro">
+            <summary>
+              <span class="country-photo"><img src="img/countries/montenegro.jpg" alt="Чорногорія: Будва" width="800" height="500" loading="lazy"><span class="price-tag">від $590</span></span>
+              <span class="country-title"><span><span class="name">Чорногорія</span><span class="from">Будва та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Бока-Которська затока, піщані пляжі та гірські монастирі.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Будва, Котор, Цетинє</dd></div>
+                    <div><dt>Сезон:</dt><dd>червень – вересень</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 2,5 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="Чорногорія">
+                  <div class="fields">
+                    <div class="field"><label for="montenegro-type">Вид туру</label><select id="montenegro-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="montenegro-date">Дата вильоту</label><input id="montenegro-date" name="date" type="date" required></div>
+                    <div class="field"><label for="montenegro-nights">Ночей</label><select id="montenegro-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="montenegro-hotel">Готель</label><select id="montenegro-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="montenegro-adults">Дорослі</label><input id="montenegro-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="montenegro-kids">Діти</label><input id="montenegro-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="montenegro-meal">Харчування</label><select id="montenegro-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="montenegro-extra">Додатково</label><select id="montenegro-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+          <details class="country" id="cyprus">
+            <summary>
+              <span class="country-photo"><img src="img/countries/cyprus.jpg" alt="Кіпр: Айя-Напа" width="800" height="500" loading="lazy"><span class="price-tag">від $640</span></span>
+              <span class="country-title"><span><span class="name">Кіпр</span><span class="from">Айя-Напа та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Пляжі з блакитним прапором, давні руїни та місцеве вино.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Айя-Напа, Лімасол, Пафос</dd></div>
+                    <div><dt>Сезон:</dt><dd>квітень – листопад</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 3 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="Кіпр">
+                  <div class="fields">
+                    <div class="field"><label for="cyprus-type">Вид туру</label><select id="cyprus-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="cyprus-date">Дата вильоту</label><input id="cyprus-date" name="date" type="date" required></div>
+                    <div class="field"><label for="cyprus-nights">Ночей</label><select id="cyprus-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="cyprus-hotel">Готель</label><select id="cyprus-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="cyprus-adults">Дорослі</label><input id="cyprus-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="cyprus-kids">Діти</label><input id="cyprus-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="cyprus-meal">Харчування</label><select id="cyprus-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="cyprus-extra">Додатково</label><select id="cyprus-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+          <details class="country" id="austria">
+            <summary>
+              <span class="country-photo"><img src="img/countries/austria.jpg" alt="Австрія: Відень" width="800" height="500" loading="lazy"><span class="price-tag">від $700</span></span>
+              <span class="country-title"><span><span class="name">Австрія</span><span class="from">Відень та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Імператорські палаци, класична музика та Альпи.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Відень, Зальцбург, Тіроль</dd></div>
+                    <div><dt>Сезон:</dt><dd>цілий рік</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 2 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="Австрія">
+                  <div class="fields">
+                    <div class="field"><label for="austria-type">Вид туру</label><select id="austria-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="austria-date">Дата вильоту</label><input id="austria-date" name="date" type="date" required></div>
+                    <div class="field"><label for="austria-nights">Ночей</label><select id="austria-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="austria-hotel">Готель</label><select id="austria-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="austria-adults">Дорослі</label><input id="austria-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="austria-kids">Діти</label><input id="austria-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="austria-meal">Харчування</label><select id="austria-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="austria-extra">Додатково</label><select id="austria-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+          <details class="country" id="switzerland">
+            <summary>
+              <span class="country-photo"><img src="img/countries/switzerland.jpg" alt="Швейцарія: Цюріх" width="800" height="500" loading="lazy"><span class="price-tag">від $1200</span></span>
+              <span class="country-title"><span><span class="name">Швейцарія</span><span class="from">Цюріх та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Панорамні потяги, чисті озера та найсмачніший шоколад.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Цюріх, Люцерн, Церматт</dd></div>
+                    <div><dt>Сезон:</dt><dd>цілий рік</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 3 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="Швейцарія">
+                  <div class="fields">
+                    <div class="field"><label for="switzerland-type">Вид туру</label><select id="switzerland-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="switzerland-date">Дата вильоту</label><input id="switzerland-date" name="date" type="date" required></div>
+                    <div class="field"><label for="switzerland-nights">Ночей</label><select id="switzerland-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="switzerland-hotel">Готель</label><select id="switzerland-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="switzerland-adults">Дорослі</label><input id="switzerland-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="switzerland-kids">Діти</label><input id="switzerland-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="switzerland-meal">Харчування</label><select id="switzerland-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="switzerland-extra">Додатково</label><select id="switzerland-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+          <details class="country" id="germany">
+            <summary>
+              <span class="country-photo"><img src="img/countries/germany.jpg" alt="Німеччина: Берлін" width="800" height="500" loading="lazy"><span class="price-tag">від $650</span></span>
+              <span class="country-title"><span><span class="name">Німеччина</span><span class="from">Берлін та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Замки, пивні сади та найкращі різдвяні ярмарки.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Берлін, Мюнхен, Баварія</dd></div>
+                    <div><dt>Сезон:</dt><dd>цілий рік</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 2 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="Німеччина">
+                  <div class="fields">
+                    <div class="field"><label for="germany-type">Вид туру</label><select id="germany-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="germany-date">Дата вильоту</label><input id="germany-date" name="date" type="date" required></div>
+                    <div class="field"><label for="germany-nights">Ночей</label><select id="germany-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="germany-hotel">Готель</label><select id="germany-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="germany-adults">Дорослі</label><input id="germany-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="germany-kids">Діти</label><input id="germany-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="germany-meal">Харчування</label><select id="germany-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="germany-extra">Додатково</label><select id="germany-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+          <details class="country" id="uk">
+            <summary>
+              <span class="country-photo"><img src="img/countries/uk.jpg" alt="Велика Британія: Лондон" width="800" height="500" loading="lazy"><span class="price-tag">від $900</span></span>
+              <span class="country-title"><span><span class="name">Велика Британія</span><span class="from">Лондон та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Біг-Бен, шотландські замки й справжні паби.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Лондон, Единбург, Оксфорд</dd></div>
+                    <div><dt>Сезон:</dt><dd>травень – вересень</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 3,5 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="Велика Британія">
+                  <div class="fields">
+                    <div class="field"><label for="uk-type">Вид туру</label><select id="uk-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="uk-date">Дата вильоту</label><input id="uk-date" name="date" type="date" required></div>
+                    <div class="field"><label for="uk-nights">Ночей</label><select id="uk-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="uk-hotel">Готель</label><select id="uk-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="uk-adults">Дорослі</label><input id="uk-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="uk-kids">Діти</label><input id="uk-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="uk-meal">Харчування</label><select id="uk-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="uk-extra">Додатково</label><select id="uk-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+          <details class="country" id="iceland">
+            <summary>
+              <span class="country-photo"><img src="img/countries/iceland.jpg" alt="Ісландія: Рейк'явік" width="800" height="500" loading="lazy"><span class="price-tag">від $1500</span></span>
+              <span class="country-title"><span><span class="name">Ісландія</span><span class="from">Рейк'явік та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Гейзери, водоспади та північне сяйво.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Рейк'явік, Золоте кільце, Вік</dd></div>
+                    <div><dt>Сезон:</dt><dd>вересень – березень</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 5 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="Ісландія">
+                  <div class="fields">
+                    <div class="field"><label for="iceland-type">Вид туру</label><select id="iceland-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="iceland-date">Дата вильоту</label><input id="iceland-date" name="date" type="date" required></div>
+                    <div class="field"><label for="iceland-nights">Ночей</label><select id="iceland-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="iceland-hotel">Готель</label><select id="iceland-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="iceland-adults">Дорослі</label><input id="iceland-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="iceland-kids">Діти</label><input id="iceland-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="iceland-meal">Харчування</label><select id="iceland-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="iceland-extra">Додатково</label><select id="iceland-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+          <details class="country" id="norway">
+            <summary>
+              <span class="country-photo"><img src="img/countries/norway.jpg" alt="Норвегія: Осло" width="800" height="500" loading="lazy"><span class="price-tag">від $1300</span></span>
+              <span class="country-title"><span><span class="name">Норвегія</span><span class="from">Осло та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Фіорди, полярні ночі та круїзи вздовж узбережжя.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Осло, Берген, Тромсе</dd></div>
+                    <div><dt>Сезон:</dt><dd>червень – серпень</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 4 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="Норвегія">
+                  <div class="fields">
+                    <div class="field"><label for="norway-type">Вид туру</label><select id="norway-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="norway-date">Дата вильоту</label><input id="norway-date" name="date" type="date" required></div>
+                    <div class="field"><label for="norway-nights">Ночей</label><select id="norway-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="norway-hotel">Готель</label><select id="norway-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="norway-adults">Дорослі</label><input id="norway-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="norway-kids">Діти</label><input id="norway-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="norway-meal">Харчування</label><select id="norway-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="norway-extra">Додатково</label><select id="norway-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+          <details class="country" id="georgia">
+            <summary>
+              <span class="country-photo"><img src="img/countries/georgia.jpg" alt="Грузія: Тбілісі" width="800" height="500" loading="lazy"><span class="price-tag">від $480</span></span>
+              <span class="country-title"><span><span class="name">Грузія</span><span class="from">Тбілісі та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Гори, вино кварвері, хінкалі та гостинність, яку не забудеш.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Тбілісі, Батумі, Казбегі</dd></div>
+                    <div><dt>Сезон:</dt><dd>цілий рік</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 3 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="Грузія">
+                  <div class="fields">
+                    <div class="field"><label for="georgia-type">Вид туру</label><select id="georgia-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="georgia-date">Дата вильоту</label><input id="georgia-date" name="date" type="date" required></div>
+                    <div class="field"><label for="georgia-nights">Ночей</label><select id="georgia-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="georgia-hotel">Готель</label><select id="georgia-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="georgia-adults">Дорослі</label><input id="georgia-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="georgia-kids">Діти</label><input id="georgia-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="georgia-meal">Харчування</label><select id="georgia-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="georgia-extra">Додатково</label><select id="georgia-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <h2 class="region-title" id="asia"><span aria-hidden="true">🏯</span> Азія та Близький Схід <small>8</small></h2>
+        <div class="countries">
+          <details class="country" id="turkey">
+            <summary>
+              <span class="country-photo"><img src="img/countries/turkey.jpg" alt="Туреччина: Анталія" width="800" height="500" loading="lazy"><span class="price-tag">від $450</span></span>
+              <span class="country-title"><span><span class="name">Туреччина</span><span class="from">Анталія та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Лазурне узбережжя, all inclusive та екскурсії до давніх міст.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Анталія, Стамбул, Каппадокія</dd></div>
+                    <div><dt>Сезон:</dt><dd>травень – жовтень</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 3 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="Туреччина">
+                  <div class="fields">
+                    <div class="field"><label for="turkey-type">Вид туру</label><select id="turkey-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="turkey-date">Дата вильоту</label><input id="turkey-date" name="date" type="date" required></div>
+                    <div class="field"><label for="turkey-nights">Ночей</label><select id="turkey-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="turkey-hotel">Готель</label><select id="turkey-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="turkey-adults">Дорослі</label><input id="turkey-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="turkey-kids">Діти</label><input id="turkey-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="turkey-meal">Харчування</label><select id="turkey-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="turkey-extra">Додатково</label><select id="turkey-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+          <details class="country" id="uae">
+            <summary>
+              <span class="country-photo"><img src="img/countries/uae.jpg" alt="ОАЕ: Дубай" width="800" height="500" loading="lazy"><span class="price-tag">від $950</span></span>
+              <span class="country-title"><span><span class="name">ОАЕ</span><span class="from">Дубай та ще 1</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Хмарочоси, сафарі в пустелі та пляжі з розкішним сервісом.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Дубай, Абу-Дабі</dd></div>
+                    <div><dt>Сезон:</dt><dd>жовтень – квітень</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 5 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="ОАЕ">
+                  <div class="fields">
+                    <div class="field"><label for="uae-type">Вид туру</label><select id="uae-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="uae-date">Дата вильоту</label><input id="uae-date" name="date" type="date" required></div>
+                    <div class="field"><label for="uae-nights">Ночей</label><select id="uae-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="uae-hotel">Готель</label><select id="uae-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="uae-adults">Дорослі</label><input id="uae-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="uae-kids">Діти</label><input id="uae-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="uae-meal">Харчування</label><select id="uae-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="uae-extra">Додатково</label><select id="uae-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+          <details class="country" id="thailand">
+            <summary>
+              <span class="country-photo"><img src="img/countries/thailand.jpg" alt="Таїланд: Пхукет" width="800" height="500" loading="lazy"><span class="price-tag">від $1100</span></span>
+              <span class="country-title"><span><span class="name">Таїланд</span><span class="from">Пхукет та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Тропічні острови, храми, вуличне їдло та масажі.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Пхукет, Бангкок, Самуї</dd></div>
+                    <div><dt>Сезон:</dt><dd>листопад – березень</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 11 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="Таїланд">
+                  <div class="fields">
+                    <div class="field"><label for="thailand-type">Вид туру</label><select id="thailand-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="thailand-date">Дата вильоту</label><input id="thailand-date" name="date" type="date" required></div>
+                    <div class="field"><label for="thailand-nights">Ночей</label><select id="thailand-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="thailand-hotel">Готель</label><select id="thailand-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="thailand-adults">Дорослі</label><input id="thailand-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="thailand-kids">Діти</label><input id="thailand-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="thailand-meal">Харчування</label><select id="thailand-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="thailand-extra">Додатково</label><select id="thailand-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+          <details class="country" id="japan">
+            <summary>
+              <span class="country-photo"><img src="img/countries/japan.jpg" alt="Японія: Токіо" width="800" height="500" loading="lazy"><span class="price-tag">від $1900</span></span>
+              <span class="country-title"><span><span class="name">Японія</span><span class="from">Токіо та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Сакура, храми, сучасні технології та неймовірна кухня.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Токіо, Кіото, Осака</dd></div>
+                    <div><dt>Сезон:</dt><dd>березень – травень</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 14 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="Японія">
+                  <div class="fields">
+                    <div class="field"><label for="japan-type">Вид туру</label><select id="japan-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="japan-date">Дата вильоту</label><input id="japan-date" name="date" type="date" required></div>
+                    <div class="field"><label for="japan-nights">Ночей</label><select id="japan-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="japan-hotel">Готель</label><select id="japan-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="japan-adults">Дорослі</label><input id="japan-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="japan-kids">Діти</label><input id="japan-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="japan-meal">Харчування</label><select id="japan-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="japan-extra">Додатково</label><select id="japan-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+          <details class="country" id="maldives">
+            <summary>
+              <span class="country-photo"><img src="img/countries/maldives.jpg" alt="Мальдіви: Мале" width="800" height="500" loading="lazy"><span class="price-tag">від $2200</span></span>
+              <span class="country-title"><span><span class="name">Мальдіви</span><span class="from">Мале та ще 1</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Бунгало над водою та кораловий рай для пари.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Мале, атоли Ару та Баа</dd></div>
+                    <div><dt>Сезон:</dt><dd>листопад – квітень</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 10 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="Мальдіви">
+                  <div class="fields">
+                    <div class="field"><label for="maldives-type">Вид туру</label><select id="maldives-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="maldives-date">Дата вильоту</label><input id="maldives-date" name="date" type="date" required></div>
+                    <div class="field"><label for="maldives-nights">Ночей</label><select id="maldives-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="maldives-hotel">Готель</label><select id="maldives-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="maldives-adults">Дорослі</label><input id="maldives-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="maldives-kids">Діти</label><input id="maldives-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="maldives-meal">Харчування</label><select id="maldives-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="maldives-extra">Додатково</label><select id="maldives-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+          <details class="country" id="indonesia">
+            <summary>
+              <span class="country-photo"><img src="img/countries/indonesia.jpg" alt="Індонезія (Балі): Убуд" width="800" height="500" loading="lazy"><span class="price-tag">від $1250</span></span>
+              <span class="country-title"><span><span class="name">Індонезія (Балі)</span><span class="from">Убуд та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Рисові тераси, серфінг, йога та храми на скелях.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Убуд, Чангу, Нуса-Пеніда</dd></div>
+                    <div><dt>Сезон:</dt><dd>квітень – жовтень</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 15 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="Індонезія (Балі)">
+                  <div class="fields">
+                    <div class="field"><label for="indonesia-type">Вид туру</label><select id="indonesia-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="indonesia-date">Дата вильоту</label><input id="indonesia-date" name="date" type="date" required></div>
+                    <div class="field"><label for="indonesia-nights">Ночей</label><select id="indonesia-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="indonesia-hotel">Готель</label><select id="indonesia-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="indonesia-adults">Дорослі</label><input id="indonesia-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="indonesia-kids">Діти</label><input id="indonesia-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="indonesia-meal">Харчування</label><select id="indonesia-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="indonesia-extra">Додатково</label><select id="indonesia-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+          <details class="country" id="vietnam">
+            <summary>
+              <span class="country-photo"><img src="img/countries/vietnam.jpg" alt="В'єтнам: Ханой" width="800" height="500" loading="lazy"><span class="price-tag">від $1050</span></span>
+              <span class="country-title"><span><span class="name">В'єтнам</span><span class="from">Ханой та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Бухта Халонг, ліхтарі Хойана та смачний суп фо.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Ханой, Нячанг, Хойан</dd></div>
+                    <div><dt>Сезон:</dt><dd>цілий рік</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 12 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="В'єтнам">
+                  <div class="fields">
+                    <div class="field"><label for="vietnam-type">Вид туру</label><select id="vietnam-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="vietnam-date">Дата вильоту</label><input id="vietnam-date" name="date" type="date" required></div>
+                    <div class="field"><label for="vietnam-nights">Ночей</label><select id="vietnam-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="vietnam-hotel">Готель</label><select id="vietnam-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="vietnam-adults">Дорослі</label><input id="vietnam-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="vietnam-kids">Діти</label><input id="vietnam-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="vietnam-meal">Харчування</label><select id="vietnam-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="vietnam-extra">Додатково</label><select id="vietnam-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+          <details class="country" id="srilanka">
+            <summary>
+              <span class="country-photo"><img src="img/countries/srilanka.jpg" alt="Шрі-Ланка: Коломбо" width="800" height="500" loading="lazy"><span class="price-tag">від $1150</span></span>
+              <span class="country-title"><span><span class="name">Шрі-Ланка</span><span class="from">Коломбо та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Чайні плантації, слони й серфінг на теплому океані.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Коломбо, Канді, Галле</dd></div>
+                    <div><dt>Сезон:</dt><dd>грудень – квітень</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 9 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="Шрі-Ланка">
+                  <div class="fields">
+                    <div class="field"><label for="srilanka-type">Вид туру</label><select id="srilanka-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="srilanka-date">Дата вильоту</label><input id="srilanka-date" name="date" type="date" required></div>
+                    <div class="field"><label for="srilanka-nights">Ночей</label><select id="srilanka-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="srilanka-hotel">Готель</label><select id="srilanka-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="srilanka-adults">Дорослі</label><input id="srilanka-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="srilanka-kids">Діти</label><input id="srilanka-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="srilanka-meal">Харчування</label><select id="srilanka-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="srilanka-extra">Додатково</label><select id="srilanka-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <h2 class="region-title" id="africa"><span aria-hidden="true">🐪</span> Африка <small>3</small></h2>
+        <div class="countries">
+          <details class="country" id="egypt">
+            <summary>
+              <span class="country-photo"><img src="img/countries/egypt.jpg" alt="Єгипет: Хургада" width="800" height="500" loading="lazy"><span class="price-tag">від $500</span></span>
+              <span class="country-title"><span><span class="name">Єгипет</span><span class="from">Хургада та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Піраміди, дайвінг на кораловому рифі та тепле море навіть узимку.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Хургада, Шарм-ель-Шейх, Каїр</dd></div>
+                    <div><dt>Сезон:</dt><dd>цілий рік</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 3,5 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="Єгипет">
+                  <div class="fields">
+                    <div class="field"><label for="egypt-type">Вид туру</label><select id="egypt-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="egypt-date">Дата вильоту</label><input id="egypt-date" name="date" type="date" required></div>
+                    <div class="field"><label for="egypt-nights">Ночей</label><select id="egypt-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="egypt-hotel">Готель</label><select id="egypt-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="egypt-adults">Дорослі</label><input id="egypt-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="egypt-kids">Діти</label><input id="egypt-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="egypt-meal">Харчування</label><select id="egypt-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="egypt-extra">Додатково</label><select id="egypt-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+          <details class="country" id="morocco">
+            <summary>
+              <span class="country-photo"><img src="img/countries/morocco.jpg" alt="Марокко: Марракеш" width="800" height="500" loading="lazy"><span class="price-tag">від $720</span></span>
+              <span class="country-title"><span><span class="name">Марокко</span><span class="from">Марракеш та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Барвисті базари, ночівля в пустелі та ароматний мʼятний чай.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Марракеш, Фес, Сахара</dd></div>
+                    <div><dt>Сезон:</dt><dd>жовтень – травень</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 5 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="Марокко">
+                  <div class="fields">
+                    <div class="field"><label for="morocco-type">Вид туру</label><select id="morocco-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="morocco-date">Дата вильоту</label><input id="morocco-date" name="date" type="date" required></div>
+                    <div class="field"><label for="morocco-nights">Ночей</label><select id="morocco-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="morocco-hotel">Готель</label><select id="morocco-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="morocco-adults">Дорослі</label><input id="morocco-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="morocco-kids">Діти</label><input id="morocco-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="morocco-meal">Харчування</label><select id="morocco-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="morocco-extra">Додатково</label><select id="morocco-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+          <details class="country" id="tunisia">
+            <summary>
+              <span class="country-photo"><img src="img/countries/tunisia.jpg" alt="Туніс: Хаммамет" width="800" height="500" loading="lazy"><span class="price-tag">від $540</span></span>
+              <span class="country-title"><span><span class="name">Туніс</span><span class="from">Хаммамет та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Піщані пляжі, талассотерапія та руїни Карфагена.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Хаммамет, Джерба, Карфаген</dd></div>
+                    <div><dt>Сезон:</dt><dd>травень – жовтень</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 3,5 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="Туніс">
+                  <div class="fields">
+                    <div class="field"><label for="tunisia-type">Вид туру</label><select id="tunisia-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="tunisia-date">Дата вильоту</label><input id="tunisia-date" name="date" type="date" required></div>
+                    <div class="field"><label for="tunisia-nights">Ночей</label><select id="tunisia-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="tunisia-hotel">Готель</label><select id="tunisia-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="tunisia-adults">Дорослі</label><input id="tunisia-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="tunisia-kids">Діти</label><input id="tunisia-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="tunisia-meal">Харчування</label><select id="tunisia-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="tunisia-extra">Додатково</label><select id="tunisia-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <h2 class="region-title" id="america"><span aria-hidden="true">🗽</span> Америка <small>3</small></h2>
+        <div class="countries">
+          <details class="country" id="usa">
+            <summary>
+              <span class="country-photo"><img src="img/countries/usa.jpg" alt="США: Нью-Йорк" width="800" height="500" loading="lazy"><span class="price-tag">від $1700</span></span>
+              <span class="country-title"><span><span class="name">США</span><span class="from">Нью-Йорк та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Хмарочоси Мангеттена, Голлівуд і довгі дороги через каньйони.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Нью-Йорк, Лос-Анджелес, Маямі</dd></div>
+                    <div><dt>Сезон:</dt><dd>цілий рік</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 13 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="США">
+                  <div class="fields">
+                    <div class="field"><label for="usa-type">Вид туру</label><select id="usa-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="usa-date">Дата вильоту</label><input id="usa-date" name="date" type="date" required></div>
+                    <div class="field"><label for="usa-nights">Ночей</label><select id="usa-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="usa-hotel">Готель</label><select id="usa-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="usa-adults">Дорослі</label><input id="usa-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="usa-kids">Діти</label><input id="usa-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="usa-meal">Харчування</label><select id="usa-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="usa-extra">Додатково</label><select id="usa-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+          <details class="country" id="brazil">
+            <summary>
+              <span class="country-photo"><img src="img/countries/brazil.jpg" alt="Бразилія: Ріо" width="800" height="500" loading="lazy"><span class="price-tag">від $1400</span></span>
+              <span class="country-title"><span><span class="name">Бразилія</span><span class="from">Ріо та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Копакабана, водоспади Ігуасу та карнавальний настрій.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Ріо, Сальвадор, Ігуасу</dd></div>
+                    <div><dt>Сезон:</dt><dd>квітень – жовтень</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 14 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="Бразилія">
+                  <div class="fields">
+                    <div class="field"><label for="brazil-type">Вид туру</label><select id="brazil-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="brazil-date">Дата вильоту</label><input id="brazil-date" name="date" type="date" required></div>
+                    <div class="field"><label for="brazil-nights">Ночей</label><select id="brazil-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="brazil-hotel">Готель</label><select id="brazil-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="brazil-adults">Дорослі</label><input id="brazil-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="brazil-kids">Діти</label><input id="brazil-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="brazil-meal">Харчування</label><select id="brazil-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="brazil-extra">Додатково</label><select id="brazil-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+          <details class="country" id="mexico">
+            <summary>
+              <span class="country-photo"><img src="img/countries/mexico.jpg" alt="Мексика: Канкун" width="800" height="500" loading="lazy"><span class="price-tag">від $1350</span></span>
+              <span class="country-title"><span><span class="name">Мексика</span><span class="from">Канкун та ще 2</span></span></span>
+            </summary>
+            <div class="country-body">
+              <div class="country-layout">
+                <div>
+                  <p>Піраміди майя, сеноти й бірюзове Карибське море.</p>
+                  <dl class="facts">
+                    <div><dt>Міста:</dt><dd>Канкун, Мехіко, Тулум</dd></div>
+                    <div><dt>Сезон:</dt><dd>листопад – квітень</dd></div>
+                    <div><dt>Переліт:</dt><dd>≈ 15 год</dd></div>
+                  </dl>
+                </div>
+                <form action="#" method="post">
+                  <input type="hidden" name="country" value="Мексика">
+                  <div class="fields">
+                    <div class="field"><label for="mexico-type">Вид туру</label><select id="mexico-type" name="type"><option>Пляжний</option><option>Екскурсійний</option><option>Активний</option><option>SPA</option><option>Романтичний</option><option>Гастро</option><option>Круїз</option><option>Гірськолижний</option></select></div>
+                    <div class="field"><label for="mexico-date">Дата вильоту</label><input id="mexico-date" name="date" type="date" required></div>
+                    <div class="field"><label for="mexico-nights">Ночей</label><select id="mexico-nights" name="nights"><option>5</option><option selected>7</option><option>10</option><option>14</option></select></div>
+                    <div class="field"><label for="mexico-hotel">Готель</label><select id="mexico-hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option></select></div>
+                    <div class="field"><label for="mexico-adults">Дорослі</label><input id="mexico-adults" name="adults" type="number" min="1" max="10" value="2"></div>
+                    <div class="field"><label for="mexico-kids">Діти</label><input id="mexico-kids" name="kids" type="number" min="0" max="6" value="0"></div>
+                    <div class="field"><label for="mexico-meal">Харчування</label><select id="mexico-meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+                    <div class="field"><label for="mexico-extra">Додатково</label><select id="mexico-extra" name="extra"><option>Нічого</option><option>Трансфер</option><option>Екскурсійний пакет</option><option>Трансфер + екскурсії</option></select></div>
+                  </div>
+                  <p class="mt"><button class="btn" type="submit">Залишити заявку</button></p>
+                </form>
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <div class="cta mt">
+          <h2>Не знайшли свій тур?</h2>
+          <p>Розкажіть про свою ідеальну подорож — ми підберемо її індивідуально.</p>
+          <a class="btn btn--lg btn--light" href="custom.html">Підібрати тур під мене</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h3>✈️ Let's Travel</h3><p>Подорожі, про які ви розповідатимете роками.</p></div>
+        <div><h3>Сторінки</h3><ul><li><a href="index.html">Головна</a></li><li><a href="tours.html">Гарячі тури</a></li><li><a href="custom.html">Підбір туру</a></li></ul></div>
+        <div><h3>Контакти</h3><ul><li><a href="tel:+380440000000">+38 (044) 000-00-00</a></li><li><a href="mailto:hello@letstravel.example">hello@letstravel.example</a></li><li>Пн–Пт 9:00–19:00</li></ul></div>
+      </div>
+      <p class="copy">© 2026 Let's Travel. Навчальний проєкт.</p>
+    </div>
+  </footer>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

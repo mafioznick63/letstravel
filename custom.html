@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <!-- Без цього рядка телефон показує сторінку як зменшену десктопну -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Індивідуальний підбір туру від Let's Travel: розкажіть про свою ідеальну подорож.">
+  <title>Підбір туру — Let's Travel</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+    // Ставимо збережену тему ще до показу сторінки (без миготіння)
+    (function () {
+      var t = localStorage.getItem("theme") || "auto";
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти до змісту</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><span aria-hidden="true">✈️</span> Let's Travel</a>
+      <nav aria-label="Головне меню">
+        <ul class="nav-list">
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="tours.html">Гарячі тури</a></li>
+          <li><a href="custom.html" aria-current="page">Підбір туру</a></li>
+          <li><a href="index.html#contacts">Контакти</a></li>
+        </ul>
+      </nav>
+        <div class="theme-switch" role="radiogroup" aria-label="Тема оформлення">
+        <label><input type="radio" name="theme" id="t-auto" value="auto" checked><span>🖥️ Авто</span></label>
+        <label><input type="radio" name="theme" id="t-light" value="light"><span>☀️ Світла</span></label>
+        <label><input type="radio" name="theme" id="t-dark" value="dark"><span>🌙 Темна</span></label>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <img src="img/custom-banner.jpg" alt="" width="1600" height="600" fetchpriority="high">
+      <div class="container">
+        <h1>Підберемо тур під вас</h1>
+        <p>Розкажіть, про що мрієте, — менеджер зв'яжеться протягом 30 хвилин у робочий час і запропонує 2–3 варіанти.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container layout">
+
+        <form class="steps-form" action="#" method="post">
+
+          <fieldset>
+            <legend>Куди їдемо</legend>
+            <div class="field">
+              <label for="country">Країна</label>
+              <select id="country" name="country" required>
+                <option value="" selected disabled>Оберіть країну…</option>
+                <optgroup label="Європа та Кавказ"><option>Греція</option><option>Іспанія</option><option>Італія</option><option>Франція</option><option>Чехія</option><option>Хорватія</option><option>Португалія</option><option>Чорногорія</option><option>Кіпр</option><option>Австрія</option><option>Швейцарія</option><option>Німеччина</option><option>Велика Британія</option><option>Ісландія</option><option>Норвегія</option><option>Грузія</option></optgroup><optgroup label="Азія та Близький Схід"><option>Туреччина</option><option>ОАЕ</option><option>Таїланд</option><option>Японія</option><option>Мальдіви</option><option>Індонезія (Балі)</option><option>В'єтнам</option><option>Шрі-Ланка</option></optgroup><optgroup label="Африка"><option>Єгипет</option><option>Марокко</option><option>Туніс</option></optgroup><optgroup label="Америка"><option>США</option><option>Бразилія</option><option>Мексика</option></optgroup>
+                <option>Ще не визначився(-лась) — підкажіть</option>
+              </select>
+            </div>
+            <p class="group-label" id="type-label">Вид туру</p>
+            <div class="type-grid" role="radiogroup" aria-labelledby="type-label">
+              <label class="type-card"><input type="radio" name="type" value="beach" checked><img src="img/types/beach.jpg" alt="" width="600" height="450" loading="lazy"><span class="type-name">🏖️ Пляжний</span></label>
+              <label class="type-card"><input type="radio" name="type" value="excursion"><img src="img/types/excursion.jpg" alt="" width="600" height="450" loading="lazy"><span class="type-name">🏛️ Екскурсійний</span></label>
+              <label class="type-card"><input type="radio" name="type" value="active"><img src="img/types/active.jpg" alt="" width="600" height="450" loading="lazy"><span class="type-name">🥾 Активний</span></label>
+              <label class="type-card"><input type="radio" name="type" value="spa"><img src="img/types/spa.jpg" alt="" width="600" height="450" loading="lazy"><span class="type-name">💆 SPA</span></label>
+              <label class="type-card"><input type="radio" name="type" value="romantic"><img src="img/types/romantic.jpg" alt="" width="600" height="450" loading="lazy"><span class="type-name">💞 Романтичний</span></label>
+              <label class="type-card"><input type="radio" name="type" value="gastro"><img src="img/types/gastro.jpg" alt="" width="600" height="450" loading="lazy"><span class="type-name">🍷 Гастро</span></label>
+              <label class="type-card"><input type="radio" name="type" value="cruise"><img src="img/types/cruise.jpg" alt="" width="600" height="450" loading="lazy"><span class="type-name">🚢 Круїз</span></label>
+              <label class="type-card"><input type="radio" name="type" value="ski"><img src="img/types/ski.jpg" alt="" width="600" height="450" loading="lazy"><span class="type-name">⛷️ Гірськолижний</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>З ким їдете</legend>
+            <div class="chips" role="radiogroup" aria-label="З ким їдете">
+              <label class="chip"><input type="radio" name="who" value="solo"><span>🧍 Один(одна)</span></label>
+              <label class="chip"><input type="radio" name="who" value="couple" checked><span>💑 Пара</span></label>
+              <label class="chip"><input type="radio" name="who" value="family"><span>👨‍👩‍👧 Сім'я з дітьми</span></label>
+              <label class="chip"><input type="radio" name="who" value="friends"><span>👯 Друзі</span></label>
+              <label class="chip"><input type="radio" name="who" value="corp"><span>💼 Корпоратив</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Дати та склад групи</legend>
+            <div class="fields">
+              <div class="field"><label for="date">Бажана дата вильоту</label><input id="date" name="date" type="date"></div>
+              <div class="field"><label for="nights">Кількість ночей</label><input id="nights" name="nights" type="number" min="3" max="30" value="7"></div>
+              <div class="field"><label for="adults">Дорослі</label><input id="adults" name="adults" type="number" min="1" max="20" value="2"></div>
+              <div class="field"><label for="kids">Діти (2–11 років)</label><input id="kids" name="kids" type="number" min="0" max="8" value="0"></div>
+              <div class="field"><label for="infants">Немовлята (до 2 років)</label><input id="infants" name="infants" type="number" min="0" max="4" value="0"></div>
+              <div class="field"><label for="ages">Вік дітей</label><input id="ages" name="ages" type="text" placeholder="напр. 4 і 9"></div>
+            </div>
+            <p class="mt"><label class="consent"><input type="checkbox" name="flex"><span>Дати гнучкі (±3 дні) — підберіть вигідніший варіант</span></label></p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Проживання та переліт</legend>
+            <p class="group-label" id="stay-label" style="margin-top:0">Тип проживання (можна кілька)</p>
+            <div class="chips" role="group" aria-labelledby="stay-label">
+              <label class="chip"><input type="checkbox" name="stay" value="hotel"><span>🏨 Готель</span></label>
+              <label class="chip"><input type="checkbox" name="stay" value="apart"><span>🏢 Апарт-готель</span></label>
+              <label class="chip"><input type="checkbox" name="stay" value="villa"><span>🏡 Вілла</span></label>
+              <label class="chip"><input type="checkbox" name="stay" value="hostel"><span>🛏️ Хостел</span></label>
+            </div>
+            <div class="fields mt">
+              <div class="field"><label for="hotel">Категорія готелю</label><select id="hotel" name="hotel"><option>3★</option><option selected>4★</option><option>5★</option><option>Будь-яка</option></select></div>
+              <div class="field"><label for="room">Тип номера</label><select id="room" name="room"><option>Стандарт</option><option>Сімейний</option><option>Люкс</option><option>З видом на море</option></select></div>
+              <div class="field"><label for="meal">Харчування</label><select id="meal" name="meal"><option>Без харчування</option><option>Сніданки</option><option>Напівпансіон</option><option selected>Все включено</option></select></div>
+              <div class="field"><label for="beach">Відстань до пляжу</label><select id="beach" name="beach"><option>Не важливо</option><option>Перша лінія</option><option>До 300 м</option><option>До 1 км</option></select></div>
+            </div>
+            <p class="group-label" id="flight-label">Клас перельоту</p>
+            <div class="chips" role="radiogroup" aria-labelledby="flight-label">
+              <label class="chip"><input type="radio" name="flight" value="eco" checked><span>💺 Економ</span></label>
+              <label class="chip"><input type="radio" name="flight" value="comfort"><span>🛋️ Комфорт</span></label>
+              <label class="chip"><input type="radio" name="flight" value="biz"><span>🥂 Бізнес</span></label>
+              <label class="chip"><input type="radio" name="flight" value="none"><span>🚫 Без перельоту</span></label>
+            </div>
+            <p class="group-label" id="extras-label">Додаткові послуги</p>
+            <div class="chips" role="group" aria-labelledby="extras-label">
+              <label class="chip"><input type="checkbox" name="extras" value="transfer"><span>🚐 Трансфер</span></label>
+              <label class="chip"><input type="checkbox" name="extras" value="ins"><span>🛡️ Розширена страховка</span></label>
+              <label class="chip"><input type="checkbox" name="extras" value="guide"><span>🧭 Український гід</span></label>
+              <label class="chip"><input type="checkbox" name="extras" value="car"><span>🚗 Оренда авто</span></label>
+              <label class="chip"><input type="checkbox" name="extras" value="visa"><span>🛂 Допомога з візою</span></label>
+              <label class="chip"><input type="checkbox" name="extras" value="esim"><span>📶 eSIM</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Бюджет</legend>
+            <div class="chips" role="radiogroup" aria-label="Бюджет на всіх">
+              <label class="chip"><input type="radio" name="budget" value="1"><span>до $1 000</span></label>
+              <label class="chip"><input type="radio" name="budget" value="2"><span>$1 000 – 2 000</span></label>
+              <label class="chip"><input type="radio" name="budget" value="3" checked><span>$2 000 – 4 000</span></label>
+              <label class="chip"><input type="radio" name="budget" value="4"><span>$4 000 – 7 000</span></label>
+              <label class="chip"><input type="radio" name="budget" value="5"><span>$7 000+</span></label>
+              <label class="chip"><input type="radio" name="budget" value="0"><span>Не обмежений</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Що хочете побачити й зробити</legend>
+            <div class="chips" role="group" aria-label="Побажання">
+              <label class="chip"><input type="checkbox" name="wish" value="exc"><span>🚌 Екскурсії</span></label>
+              <label class="chip"><input type="checkbox" name="wish" value="mus"><span>🖼️ Музеї</span></label>
+              <label class="chip"><input type="checkbox" name="wish" value="arch"><span>🏛️ Історія й архітектура</span></label>
+              <label class="chip"><input type="checkbox" name="wish" value="nat"><span>🌋 Природа</span></label>
+              <label class="chip"><input type="checkbox" name="wish" value="shop"><span>🛍️ Шопінг</span></label>
+              <label class="chip"><input type="checkbox" name="wish" value="night"><span>🎶 Нічне життя</span></label>
+              <label class="chip"><input type="checkbox" name="wish" value="food"><span>🍜 Місцева кухня</span></label>
+              <label class="chip"><input type="checkbox" name="wish" value="water"><span>🤿 Дайвінг і водні розваги</span></label>
+              <label class="chip"><input type="checkbox" name="wish" value="kids"><span>🎠 Розваги для дітей</span></label>
+              <label class="chip"><input type="checkbox" name="wish" value="photo"><span>📸 Фотолокації</span></label>
+              <label class="chip"><input type="checkbox" name="wish" value="fest"><span>🎉 Фестивалі</span></label>
+              <label class="chip"><input type="checkbox" name="wish" value="wine"><span>🍷 Дегустації</span></label>
+              <label class="chip"><input type="checkbox" name="wish" value="hike"><span>🥾 Походи</span></label>
+              <label class="chip"><input type="checkbox" name="wish" value="rel"><span>🧘 Релакс</span></label>
+              <label class="chip"><input type="checkbox" name="wish" value="park"><span>🎢 Парки атракціонів</span></label>
+              <label class="chip"><input type="checkbox" name="wish" value="local"><span>🏘️ Життя місцевих</span></label>
+            </div>
+            <p class="group-label" id="pace-label">Темп відпочинку</p>
+            <div class="chips" role="radiogroup" aria-labelledby="pace-label">
+              <label class="chip"><input type="radio" name="pace" value="calm"><span>🐢 Спокійний</span></label>
+              <label class="chip"><input type="radio" name="pace" value="mid" checked><span>⚖️ Збалансований</span></label>
+              <label class="chip"><input type="radio" name="pace" value="busy"><span>⚡ Насичений</span></label>
+            </div>
+            <div class="fields mt">
+              <div class="field"><label for="must">Обов'язково хочу побачити</label><input id="must" name="must" type="text" placeholder="Колізей, Саграда Фамілія…"></div>
+              <div class="field"><label for="avoid">Чого уникати</label><input id="avoid" name="avoid" type="text" placeholder="натовпів, висоти…"></div>
+            </div>
+            <div class="field mt">
+              <label for="notes">Примітки та особливі побажання</label>
+              <textarea id="notes" name="notes" placeholder="Наприклад: готель біля моря, алергія на горіхи, святкуємо річницю…"></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Ваші контакти</legend>
+            <div class="fields">
+              <div class="field"><label for="name">Ім'я та прізвище</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+              <div class="field"><label for="phone">Телефон</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div>
+              <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></div>
+              <div class="field"><label for="contact">Як зв'язатися</label><select id="contact" name="contact"><option>Телефон</option><option>Telegram</option><option>Viber</option><option>Email</option></select></div>
+              <div class="field"><label for="time">Зручний час дзвінка</label><select id="time" name="time"><option>Будь-який</option><option>Ранок (9–12)</option><option>День (12–16)</option><option>Вечір (16–19)</option></select></div>
+              <div class="field"><label for="source">Як про нас дізналися</label><select id="source" name="source"><option>Рекомендація</option><option>Instagram</option><option>Google</option><option>Реклама</option><option>Інше</option></select></div>
+            </div>
+            <p class="mt"><label class="consent"><input type="checkbox" name="news"><span>Хочу отримувати гарячі пропозиції на email</span></label></p>
+            <p><label class="consent"><input type="checkbox" name="consent" required><span>Погоджуюсь на обробку персональних даних</span></label></p>
+          </fieldset>
+
+          <button class="btn btn--lg" type="submit">Надіслати заявку</button>
+        </form>
+
+        <aside class="card aside-card" aria-label="Корисні поради">
+          <img src="img/custom-side.jpg" alt="Подорожні планують маршрут із менеджером" width="800" height="500" loading="lazy">
+          <h2 style="font-size:1.4rem">Як це працює</h2>
+          <ul class="ticks">
+            <li>Заповніть анкету — це 3 хвилини.</li>
+            <li>Ми підготуємо 2–3 варіанти під ваш бюджет.</li>
+            <li>Підбір безкоштовний і ні до чого не зобов'язує.</li>
+            <li>Бронюємо лише після вашого «так».</li>
+          </ul>
+          <p class="muted mt">Не знаєте, куди їхати? Оберіть «Ще не визначився» — підкажемо за вашими вподобаннями.</p>
+          <p><a class="btn btn--light" href="tel:+380440000000">📞 Зателефонувати</a></p>
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h3>✈️ Let's Travel</h3><p>Подорожі, про які ви розповідатимете роками.</p></div>
+        <div><h3>Сторінки</h3><ul><li><a href="index.html">Головна</a></li><li><a href="tours.html">Гарячі тури</a></li><li><a href="custom.html">Підбір туру</a></li></ul></div>
+        <div><h3>Контакти</h3><ul><li><a href="tel:+380440000000">+38 (044) 000-00-00</a></li><li><a href="mailto:hello@letstravel.example">hello@letstravel.example</a></li><li>Пн–Пт 9:00–19:00</li></ul></div>
+      </div>
+      <p class="copy">© 2026 Let's Travel. Навчальний проєкт.</p>
+    </div>
+  </footer>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

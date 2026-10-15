@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <!-- Без цього рядка телефон показує сторінку як зменшену десктопну -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Let's Travel — турагентство: гарячі тури, індивідуальний підбір подорожі, підтримка 24/7.">
+  <title>Let's Travel — турагентство</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+    // Ставимо збережену тему ще до показу сторінки (без миготіння)
+    (function () {
+      var t = localStorage.getItem("theme") || "auto";
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти до змісту</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><span aria-hidden="true">✈️</span> Let's Travel</a>
+      <nav aria-label="Головне меню">
+        <ul class="nav-list">
+          <li><a href="index.html" aria-current="page">Головна</a></li>
+          <li><a href="tours.html">Гарячі тури</a></li>
+          <li><a href="custom.html">Підбір туру</a></li>
+          <li><a href="index.html#contacts">Контакти</a></li>
+        </ul>
+      </nav>
+        <div class="theme-switch" role="radiogroup" aria-label="Тема оформлення">
+        <label><input type="radio" name="theme" id="t-auto" value="auto" checked><span>🖥️ Авто</span></label>
+        <label><input type="radio" name="theme" id="t-light" value="light"><span>☀️ Світла</span></label>
+        <label><input type="radio" name="theme" id="t-dark" value="dark"><span>🌙 Темна</span></label>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <h1>Let's Travel</h1>
+          <p class="lead">Let's travel with Let's Travel — подорожі, про які ви розповідатимете роками. Ми візьмемо на себе все: від квитків до трансферу.</p>
+          <div class="btn-row">
+            <a class="btn btn--lg" href="custom.html">Підібрати тур</a>
+            <a class="btn btn--lg btn--light" href="tours.html">Гарячі тури</a>
+          </div>
+          <ul class="trust"><li>✓ Без прихованих платежів</li><li>✓ Страхування в кожному турі</li><li>✓ Підтримка 24/7</li></ul>
+        </div>
+        <!-- srcset: браузер сам обере менший або більший файл. Не lazy — це головне фото -->
+        <div class="hero-media">
+          <img src="img/hero-map-1600.jpg"
+               srcset="img/hero-map-800.jpg 800w, img/hero-map-1600.jpg 1600w"
+               sizes="(width >= 64rem) 36rem, 100vw"
+               width="1600" height="1200" fetchpriority="high"
+               alt="Карта світу з маршрутами подорожей">
+          <span class="float-badge float-badge--a"><span aria-hidden="true">🔥</span> −20% на раннє бронювання</span>
+          <span class="float-badge float-badge--b"><span aria-hidden="true">⭐</span> 4,9 / 5</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ПРО АГЕНТСТВО ===== -->
+    <section class="section" id="about">
+      <div class="container about">
+        <div class="about-media">
+          <img src="img/about.jpg" alt="Команда турагентства Let's Travel в офісі" width="900" height="700" loading="lazy">
+        </div>
+        <div>
+          <span class="eyebrow">Про нас</span>
+          <h2>Турагентство, якому довіряють</h2>
+          <p>Let's Travel працює з 2012 року. Ми підбираємо подорожі під вашу мрію, бюджет і темп: від спокійного тижня біля моря до насиченого екскурсійного маршруту.</p>
+          <p>Працюємо напряму з перевіреними авіакомпаніями, готелями та гідами, тому ціна в договорі — це ціна, яку ви заплатите.</p>
+          <div class="stats">
+            <div class="stat"><strong>12+</strong>років на ринку</div>
+            <div class="stat"><strong>8 500</strong>мандрівників</div>
+            <div class="stat"><strong>30</strong>країн</div>
+            <div class="stat"><strong>4,9</strong>середня оцінка</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== КРАЇНИ ===== -->
+    <section class="section section--white" id="countries">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Напрямки</span>
+          <h2>Куди ми пропонуємо поїхати</h2>
+          <p class="muted">Найпопулярніші країни цього сезону. Повний список із 30 напрямків — на сторінці гарячих турів.</p>
+        </div>
+        <div class="grid">
+          <a class="dest" href="tours.html#turkey">
+            <div class="dest-img"><img src="img/countries/turkey.jpg" alt="Туреччина: Анталія" width="800" height="500" loading="lazy"><span class="price-tag">від $450</span></div>
+            <div class="dest-body"><h3>Туреччина</h3><p class="muted">Анталія, Стамбул, Каппадокія</p></div>
+          </a>
+          <a class="dest" href="tours.html#egypt">
+            <div class="dest-img"><img src="img/countries/egypt.jpg" alt="Єгипет: Хургада" width="800" height="500" loading="lazy"><span class="price-tag">від $500</span></div>
+            <div class="dest-body"><h3>Єгипет</h3><p class="muted">Хургада, Шарм-ель-Шейх, Каїр</p></div>
+          </a>
+          <a class="dest" href="tours.html#greece">
+            <div class="dest-img"><img src="img/countries/greece.jpg" alt="Греція: Крит" width="800" height="500" loading="lazy"><span class="price-tag">від $620</span></div>
+            <div class="dest-body"><h3>Греція</h3><p class="muted">Крит, Родос, Афіни</p></div>
+          </a>
+          <a class="dest" href="tours.html#spain">
+            <div class="dest-img"><img src="img/countries/spain.jpg" alt="Іспанія: Барселона" width="800" height="500" loading="lazy"><span class="price-tag">від $750</span></div>
+            <div class="dest-body"><h3>Іспанія</h3><p class="muted">Барселона, Коста-Брава, Мадрид</p></div>
+          </a>
+          <a class="dest" href="tours.html#italy">
+            <div class="dest-img"><img src="img/countries/italy.jpg" alt="Італія: Рим" width="800" height="500" loading="lazy"><span class="price-tag">від $800</span></div>
+            <div class="dest-body"><h3>Італія</h3><p class="muted">Рим, Венеція, Флоренція</p></div>
+          </a>
+          <a class="dest" href="tours.html#thailand">
+            <div class="dest-img"><img src="img/countries/thailand.jpg" alt="Таїланд: Пхукет" width="800" height="500" loading="lazy"><span class="price-tag">від $1100</span></div>
+            <div class="dest-body"><h3>Таїланд</h3><p class="muted">Пхукет, Бангкок, Самуї</p></div>
+          </a>
+          <a class="dest" href="tours.html#brazil">
+            <div class="dest-img"><img src="img/countries/brazil.jpg" alt="Бразилія: Ріо" width="800" height="500" loading="lazy"><span class="price-tag">від $1400</span></div>
+            <div class="dest-body"><h3>Бразилія</h3><p class="muted">Ріо, Сальвадор, Ігуасу</p></div>
+          </a>
+          <a class="dest" href="tours.html#croatia">
+            <div class="dest-img"><img src="img/countries/croatia.jpg" alt="Хорватія: Дубровник" width="800" height="500" loading="lazy"><span class="price-tag">від $680</span></div>
+            <div class="dest-body"><h3>Хорватія</h3><p class="muted">Дубровник, Спліт, Плітвіцькі озера</p></div>
+          </a>
+          <a class="dest" href="tours.html#georgia">
+            <div class="dest-img"><img src="img/countries/georgia.jpg" alt="Грузія: Тбілісі" width="800" height="500" loading="lazy"><span class="price-tag">від $480</span></div>
+            <div class="dest-body"><h3>Грузія</h3><p class="muted">Тбілісі, Батумі, Казбегі</p></div>
+          </a>
+          <a class="dest" href="tours.html#usa">
+            <div class="dest-img"><img src="img/countries/usa.jpg" alt="США: Нью-Йорк" width="800" height="500" loading="lazy"><span class="price-tag">від $1700</span></div>
+            <div class="dest-body"><h3>США</h3><p class="muted">Нью-Йорк, Лос-Анджелес, Маямі</p></div>
+          </a>
+        </div>
+        <p class="center mt"><a class="btn btn--lg" href="tours.html">Усі 30 напрямків</a></p>
+      </div>
+    </section>
+
+    <!-- ===== ПЕРЕВАГИ ===== -->
+    <section class="section" id="advantages">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Переваги</span>
+          <h2>Чому обирають Let's Travel</h2>
+        </div>
+        <div class="grid features">
+          <article class="card"><div class="icon" aria-hidden="true">🎯</div><h3>Індивідуальний підхід</h3><p>Підбираємо тур під ваші побажання, а не продаємо те, що «горить».</p></article>
+          <article class="card"><div class="icon" aria-hidden="true">💳</div><h3>Чесні ціни</h3><p>Жодних прихованих доплат: усе, що входить у вартість, прописано в договорі.</p></article>
+          <article class="card"><div class="icon" aria-hidden="true">🛟</div><h3>Підтримка 24/7</h3><p>Менеджер на зв'язку вдень і вночі — також під час вашої подорожі.</p></article>
+          <article class="card"><div class="icon" aria-hidden="true">🛡️</div><h3>Страхування</h3><p>Медична страховка входить у кожен тур. Спокійний відпочинок без турбот.</p></article>
+          <article class="card"><div class="icon" aria-hidden="true">🏨</div><h3>Перевірені готелі</h3><p>Ми знайомі з готелями-партнерами та читаємо свіжі відгуки гостей.</p></article>
+          <article class="card"><div class="icon" aria-hidden="true">🔥</div><h3>Гарячі пропозиції</h3><p>Знижки до 30 % на раннє бронювання та вильоти в останній момент.</p></article>
+          <article class="card"><div class="icon" aria-hidden="true">👨‍👩‍👧</div><h3>Сімейні програми</h3><p>Дитячі клуби, сімейні номери та екскурсії, які цікаві всім віковим групам.</p></article>
+          <article class="card"><div class="icon" aria-hidden="true">🌍</div><h3>Власні гіди</h3><p>Працюємо з місцевими гідами, які знають країну зсередини.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ЯК ПРАЦЮЄМО ===== -->
+    <section class="section section--white" id="steps">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Як це працює</span>
+          <h2>Від заявки до валіз за 4 кроки</h2>
+        </div>
+        <ol class="steps">
+          <li><h3>Заявка</h3><p>Оберіть тур чи заповніть анкету підбору — це 3 хвилини.</p></li>
+          <li><h3>Підбір</h3><p>Менеджер зв'яжеться і запропонує 2–3 варіанти під ваш бюджет.</p></li>
+          <li><h3>Договір</h3><p>Підписуємо документи, вносимо передоплату, бронюємо.</p></li>
+          <li><h3>Подорож</h3><p>Отримуєте квитки та ваучери — і вирушаєте! Ми на зв'язку 24/7.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== ВІДГУКИ (карусель) ===== -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Відгуки</span>
+          <h2>Що кажуть наші клієнти</h2>
+          <p class="muted">Гортайте вправо — пальцем, коліщатком або кнопками.</p>
+        </div>
+        <!-- tabindex="0": карусель можна гортати клавішами ← → -->
+        <div class="carousel" data-carousel tabindex="0" role="region" aria-label="Відгуки клієнтів">
+          <figure class="card review">
+            <div class="review-photo"><img src="img/reviews/review-1.jpg" alt="Фото з подорожі: Туреччина, 7 ночей" width="800" height="500" loading="lazy"></div>
+            <div class="review-body">
+              <div class="stars" role="img" aria-label="Оцінка 5 з 5">★★★★★</div>
+              <blockquote><p>Їздили з дітьми. Усе чітко: трансфер зустрів, готель як на фото. Менеджер відповідав навіть уночі!</p></blockquote>
+              <figcaption><span class="avatar" aria-hidden="true">О</span><span>Олена К.<small>Туреччина, 7 ночей</small></span></figcaption>
+            </div>
+          </figure>
+          <figure class="card review">
+            <div class="review-photo"><img src="img/reviews/review-2.jpg" alt="Фото з подорожі: Італія, 10 ночей" width="800" height="500" loading="lazy"></div>
+            <div class="review-body">
+              <div class="stars" role="img" aria-label="Оцінка 5 з 5">★★★★★</div>
+              <blockquote><p>Підібрали екскурсійний тур саме з музеями, які я хотів. Маршрут продуманий до дрібниць.</p></blockquote>
+              <figcaption><span class="avatar" aria-hidden="true">А</span><span>Андрій М.<small>Італія, 10 ночей</small></span></figcaption>
+            </div>
+          </figure>
+          <figure class="card review">
+            <div class="review-photo"><img src="img/reviews/review-3.jpg" alt="Фото з подорожі: Таїланд, 14 ночей" width="800" height="500" loading="lazy"></div>
+            <div class="review-body">
+              <div class="stars" role="img" aria-label="Оцінка 5 з 5">★★★★★</div>
+              <blockquote><p>Медовий місяць — мрія. Дякуємо за сюрприз із вечерею на березі від агентства!</p></blockquote>
+              <figcaption><span class="avatar" aria-hidden="true">М</span><span>Марія та Денис<small>Таїланд, 14 ночей</small></span></figcaption>
+            </div>
+          </figure>
+          <figure class="card review">
+            <div class="review-photo"><img src="img/reviews/review-4.jpg" alt="Фото з подорожі: Хорватія, 8 ночей" width="800" height="500" loading="lazy"></div>
+            <div class="review-body">
+              <div class="stars" role="img" aria-label="Оцінка 5 з 5">★★★★★</div>
+              <blockquote><p>Дубровник, Спліт і Плітвіцькі озера за один тур. Дуже зручні переїзди та чудові гіди.</p></blockquote>
+              <figcaption><span class="avatar" aria-hidden="true">І</span><span>Ірина Л.<small>Хорватія, 8 ночей</small></span></figcaption>
+            </div>
+          </figure>
+          <figure class="card review">
+            <div class="review-photo"><img src="img/reviews/review-5.jpg" alt="Фото з подорожі: Грузія, 6 ночей" width="800" height="500" loading="lazy"></div>
+            <div class="review-body">
+              <div class="stars" role="img" aria-label="Оцінка 5 з 5">★★★★★</div>
+              <blockquote><p>Їздили компанією друзів. Організували все: від вина в Кахетії до походу в гори. Рекомендую!</p></blockquote>
+              <figcaption><span class="avatar" aria-hidden="true">С</span><span>Сергій П.<small>Грузія, 6 ночей</small></span></figcaption>
+            </div>
+          </figure>
+          <figure class="card review">
+            
+            <div class="review-body">
+              <div class="stars" role="img" aria-label="Оцінка 5 з 5">★★★★★</div>
+              <blockquote><p>Перший раз у відпустці без стресу. Усі квитки та документи були вчасно, готель — 10 з 10.</p></blockquote>
+              <figcaption><span class="avatar" aria-hidden="true">Н</span><span>Наталія Б.<small>Єгипет, 7 ночей</small></span></figcaption>
+            </div>
+          </figure>
+          <figure class="card review">
+            
+            <div class="review-body">
+              <div class="stars" role="img" aria-label="Оцінка 5 з 5">★★★★★</div>
+              <blockquote><p>Складний маршрут із кількома містами. Агентство зробило його простим і зрозумілим.</p></blockquote>
+              <figcaption><span class="avatar" aria-hidden="true">В</span><span>Віктор Д.<small>США, 12 ночей</small></span></figcaption>
+            </div>
+          </figure>
+          <figure class="card review">
+            
+            <div class="review-body">
+              <div class="stars" role="img" aria-label="Оцінка 5 з 5">★★★★★</div>
+              <blockquote><p>Родос — це любов. Дякуємо, що підказали готель біля тихого пляжу, без натовпу.</p></blockquote>
+              <figcaption><span class="avatar" aria-hidden="true">О</span><span>Оксана Т.<small>Греція, 10 ночей</small></span></figcaption>
+            </div>
+          </figure>
+        </div>
+        <div class="carousel-controls">
+          <button class="round-btn" type="button" data-carousel-btn="-1" aria-label="Попередні відгуки">‹</button>
+          <button class="round-btn" type="button" data-carousel-btn="1" aria-label="Наступні відгуки">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section section--white" id="faq">
+      <div class="container">
+        <div class="section-head"><span class="eyebrow">Питання</span><h2>Часті запитання</h2></div>
+        <div class="faq">
+          <details><summary>Скільки коштує підбір туру?</summary><p>Підбір безкоштовний. Ви платите тільки за сам тур, і вартість чітко прописана в договорі.</p></details>
+          <details><summary>Чи можна змінити або скасувати тур?</summary><p>Так. Умови залежать від авіакомпанії та готелю — менеджер покаже їх до підписання договору.</p></details>
+          <details><summary>Чи входить страхування у вартість?</summary><p>Базова медична страховка входить у всі тури. За бажання можна оформити розширену.</p></details>
+          <details><summary>Як швидко ви відповідаєте на заявку?</summary><p>У робочий час — протягом 30 хвилин, у неробочий — наступного ранку.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="cta">
+          <h2>Готові до подорожі?</h2>
+          <p>Розкажіть, про що мрієте, — а ми запропонуємо варіанти вже сьогодні.</p>
+          <a class="btn btn--lg btn--light" href="custom.html">Підібрати тур</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== КОНТАКТИ ===== -->
+    <section class="section section--white" id="contacts">
+      <div class="container">
+        <div class="section-head"><span class="eyebrow">Контакти</span><h2>Зв'яжіться з нами</h2></div>
+        <div class="contacts">
+          <div>
+            <div class="card">
+              <ul class="contact-list">
+                <li><span aria-hidden="true">📍</span><span>м. Київ, просп. Берестейський, 37, офіс 702</span></li>
+                <li><span aria-hidden="true">📞</span><a href="tel:+380440000000">+38 (044) 000-00-00</a></li>
+                <li><span aria-hidden="true">✉️</span><a href="mailto:hello@letstravel.example">hello@letstravel.example</a></li>
+                <li><span aria-hidden="true">🕘</span><span>Пн–Пт 9:00–19:00, Сб 10:00–16:00</span></li>
+              </ul>
+            </div>
+            <div class="map mt">
+              <iframe title="Офіс Let's Travel на карті" loading="lazy"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=30.445%2C50.443%2C30.470%2C50.456&amp;layer=mapnik&amp;marker=50.4488%2C30.4590"></iframe>
+            </div>
+          </div>
+          <form class="card" action="#" method="post">
+            <h3>Швидке повідомлення</h3>
+            <div class="field"><label for="c-name">Ім'я</label><input id="c-name" name="name" type="text" autocomplete="name" required></div>
+            <div class="field mt"><label for="c-phone">Телефон</label><input id="c-phone" name="phone" type="tel" autocomplete="tel" required></div>
+            <div class="field mt"><label for="c-msg">Повідомлення</label><textarea id="c-msg" name="message"></textarea></div>
+            <p class="mt"><button class="btn" type="submit">Надіслати</button></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h3>✈️ Let's Travel</h3><p>Подорожі, про які ви розповідатимете роками.</p></div>
+        <div><h3>Сторінки</h3><ul><li><a href="index.html">Головна</a></li><li><a href="tours.html">Гарячі тури</a></li><li><a href="custom.html">Підбір туру</a></li></ul></div>
+        <div><h3>Контакти</h3><ul><li><a href="tel:+380440000000">+38 (044) 000-00-00</a></li><li><a href="mailto:hello@letstravel.example">hello@letstravel.example</a></li><li>Пн–Пт 9:00–19:00</li></ul></div>
+      </div>
+      <p class="copy">© 2026 Let's Travel. Навчальний проєкт.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
